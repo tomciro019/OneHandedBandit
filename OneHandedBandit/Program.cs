@@ -6,7 +6,8 @@ namespace OneHandedBandit
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Bandit bandit = new Bandit(10000);
+
         }
     }
 }
