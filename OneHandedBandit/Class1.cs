@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.CompilerServices;
+using System;
 using System.Collections.Generic;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
 namespace OneHandedBandit
@@ -29,11 +31,34 @@ namespace OneHandedBandit
             _wallet = wallet;
         }
 
+        public int Vypocet(int a, int b)
+        {
+            int vypocet = b + a * 10;
+          
+            return  vypocet;
+          
+
+        }
+        public int vypocet2(int a, int b)
+        {
+            int vypocet2 = b - a;
+            
+            return vypocet2;
+            
+        }
+
+        public Symbol x;
+        public Symbol y;
+        public Symbol z;
         public bool Verify()
         {
-            int ot1 = rand.Next(0, 5);
+
+             int ot1 = rand.Next(0, 5);
             int ot2 = rand.Next(0, 5);
-            int ot3 = rand.Next(0, 5);
+             int ot3 = rand.Next(0, 5);
+             x = (Symbol)ot1;
+             y = (Symbol)ot2;
+             z = (Symbol)ot3;
 
             if (ot1 == ot2 && ot1 == ot3)
             {

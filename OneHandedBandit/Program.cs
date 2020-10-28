@@ -7,6 +7,7 @@ namespace OneHandedBandit
         static void Main(string[] args)
         {
             Bandit bandit = new Bandit(10000);
+
             
  
 
@@ -17,10 +18,12 @@ namespace OneHandedBandit
                 string convert = Console.ReadLine();
                 int Bet = int.Parse(convert);
                 bool ot = bandit.Verify();
+                Console.WriteLine("{0}.{1}.{2}", bandit.x, bandit.y, bandit.z);
                 if (ot == true)
                 {
-                    Console.WriteLine("Vyhrál jsi");
-                    bandit.Wallet = bandit.Wallet + Bet * 10;
+                    bandit.Wallet = bandit.Vypocet( Bet, bandit.Wallet);
+                    Console.WriteLine("Vyhrál jsi: "+ Bet*10  );
+                    
 
                     
                     
@@ -28,8 +31,10 @@ namespace OneHandedBandit
                 }
                 else if (ot == false)
                 {
-                    Console.WriteLine("Prohrál jsi");
-                    bandit.Wallet = bandit.Wallet - Bet;
+                    bandit.Wallet = bandit.vypocet2(Bet, bandit.Wallet);
+                    
+                    Console.WriteLine("Prohrál jsi: "+ Bet);
+                    
                 }
 
 

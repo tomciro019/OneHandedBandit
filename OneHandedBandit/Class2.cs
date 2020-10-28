@@ -4,8 +4,8 @@ using System.Text;
 
 namespace OneHandedBandit
 {
-    class symbol
-    {
+    
+    
        
        
             public enum Symbol
@@ -19,4 +19,4 @@ namespace OneHandedBandit
     
 
     }
-}
+
