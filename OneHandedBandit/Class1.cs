@@ -19,7 +19,7 @@ namespace OneHandedBandit
                 return _wallet;
             }
 
-            private set
+             set
             {
                 _wallet = value;
             }
