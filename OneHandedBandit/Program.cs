@@ -18,7 +18,7 @@ namespace OneHandedBandit
                 string convert = Console.ReadLine();
                 int Bet = int.Parse(convert);
                 bool ot = bandit.Verify();
-                Console.WriteLine("{0}.{1}.{2}", bandit.x, bandit.y, bandit.z);
+                Console.WriteLine("{0}|{1}|{2}", bandit.x, bandit.y, bandit.z);
                 if (ot == true)
                 {
                     bandit.Wallet = bandit.Vypocet( Bet, bandit.Wallet);
